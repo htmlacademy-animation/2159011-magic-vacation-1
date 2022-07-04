@@ -13,6 +13,14 @@
   }
 }
 
+.swiper-slide-active,
+.swiper-slide-next{
+   .slider__item-text{
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
 .slider__item {
   display: flex;
   flex-direction: column;
@@ -96,6 +104,10 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  transition-duration: 650ms;
+  transform: translateY(15px);
+  transition-delay: 300ms;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

@@ -10,6 +10,13 @@
     display: none;
   }
 
+  &.active{
+   .intro__message{
+      opacity: 1;
+      transform: translateY(0);
+   }
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
   }
@@ -308,6 +315,44 @@
 .screen--game {
   position: relative;
   background-color: $c-dark;
+  &.active{
+   #message-field{
+      width: calc(100% - 21rem);
+      opacity: 1;
+   }
+ }
+
+ @media (min-width: $stop-scaling) {
+   &.active{
+      #message-field{
+         width: calc(100% - 210px);
+      }
+    }
+ }
+
+ @media (orientation: portrait) {
+   &.active{
+      #message-field{
+         width: calc(100% - 5rem);
+      }
+    }
+ }
+
+ @media (max-width: $tablet) and (orientation: landscape) {
+   &.active{
+      #message-field{
+         width: calc(100% - 9rem);
+      }
+    }
+ }
+
+ @media (max-width: $mobile) and (orientation: landscape) {
+   &.active{
+      #message-field{
+         width: calc(100% - 5rem);
+      }
+    }
+ }
 
   &::before {
     content: "";
