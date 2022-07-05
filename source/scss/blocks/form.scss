@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .form__label {
@@ -43,6 +44,15 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  &#message-field {
+    width: 0;
+    transition-duration: 550ms;
+    position: absolute;
+    right: 21rem;
+    top: 0;
+    opacity: 0;
+  }
+  
 
   &:focus {
     border: 1px solid $c-purple;
@@ -55,6 +65,9 @@
     width: calc(100% - 210px);
     font-size: 24px;
     border-radius: 30px;
+    &#message-field {
+      right: 180px;
+    }
   }
 
   @media (orientation: portrait) {
@@ -63,10 +76,16 @@
     width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
+    &#message-field {
+      right: 4rem;
+    }
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
     width: calc(100% - 9rem);
+    &#message-field {
+      right: 8rem;
+    }
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
@@ -75,11 +94,15 @@
     width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
+    &#message-field {
+      right: 4rem;
+    }
   }
 }
 
 .form__button {
   flex-grow: 1;
+  max-width: 21rem;
 
   @media (orientation: portrait) {
     position: relative;
