@@ -2,6 +2,7 @@
 import mobileHeight from './modules/mobile-height-adjust.js';
 import slider from './modules/slider.js';
 import menu from './modules/menu.js';
+import animation from './modules/animation.js';
 import footer from './modules/footer.js';
 import chat from './modules/chat.js';
 import result from './modules/result.js';
@@ -14,6 +15,7 @@ mobileHeight();
 slider();
 menu();
 footer();
+animation();
 chat();
 result();
 form();
