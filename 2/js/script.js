@@ -10265,7 +10265,7 @@ module.exports = code;
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
    window.onload = function() {
-      document.body.classList.add('active-page');
+      document.body.classList.add('page-loaded');
     };
  });
 
